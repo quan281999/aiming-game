@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aiming Game</title>
+</head>
+<body>
+    <h1>Aiming Game!</h1>
+    <h2>How accurate is your aim?</h2>
+    <span class="best-score" id="best-score">Best Score: </span>
+    <span class="score" id="score">Score: </span>
+    <div class="start-container">
+        <select class="difficulty" id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <button class="btn" id="start-btn">Start Game</button>
+    </div>
+    <button class="rules-btn btn" id="rules-btn">Show Rules</button>
+    <div class="rules" id="rules">
+        <h2>How To Play:</h2>
+        <p>Please choose a level that suits you.</p>
+        <p>Shoot the targets that appear on the screen as many as possible.</p>
+        <p>I dare you to start with difficulty ^^!</p>
+        <button id="close-btn" class="btn">Close</button>
+    </div>
+    <div class="over-container" id="over-container">
+        <p id="over-score">SCORE: </p>
+        <button class="btn" id="again-btn">Play Again</button>
+    </div>
+    <canvas id="canvas" width="1500" height="580"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
