@@ -13,6 +13,10 @@ const canvasLeft = canvas.offsetLeft + canvas.clientLeft;
 const canvasTop = canvas.offsetTop + canvas.clientTop;
 const ctx = canvas.getContext('2d');
 
+// set height and width of the canvas element
+canvas.height = window.innerHeight * 0.8;
+canvas.width = window.innerWidth - 40;
+
 // initial score, difficulty, best score, time between turns, number of targets
 // and number of turns
 let score = 0;
@@ -189,8 +193,6 @@ startButton.addEventListener('click', startGame);
 canvas.addEventListener("click", (e) => {
     const x = e.pageX;
     const y = e.pageY - canvasTop;
-    console.log(x, y);
-    console.log(targets[0].x, targets[0].y);
     // check if user clicked a targert
     targets.forEach((target,index) => {
         if (y > target.y - target.size && y < target.y + target.size
